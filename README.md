@@ -1,34 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Challenge Jüsto
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Get started](#get-started)
+- [Why i chose Next](#why-i-choose-next)
+- [what can you expect](#what-can-you-expect)
+- [Why i chose vercel](#why-i-chose-vercel)
+- [Stack](#stack)
+- [Metrics web vitals](#metrics-web-vitals)
+- [CI/CD](#ci-cd)
 
-```bash
-npm run dev
-# or
-yarn dev
+## Get started
+
+Well the steps to configure this is very simple. I'm using the pnpm version `7.16.7` and `v19.0.1` of node.js, once clarified, let's explain the commands found in the `package.json`. 
+
+
+
+```json
+ "scripts": {
+    "dev": "next",
+    "start": "next build && next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged --allow-empty"
+  },
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- dev: run our project locally
+- start: create the build in production and run the app in a production environment
+- lint: check that we comply with the rules defined in our eslint configuration file
+- pre-commit: it defines the hook to execute before committing to a file
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Why i choose Next
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Next.js is one of the most popular frameworks in the React ecosystem, it allows us great flexibility when building our applications, we can take approaches such as SSR, CSR or make a mix between both, which produces ISR. 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+ I'm using this project as an experiment to see how a modern app would work in Next.js 13 and server components.
 
-## Learn More
+## What can you expect
 
-To learn more about Next.js, take a look at the following resources:
+- Written in TypeScript
+- Server and Client Components
+- Styled using Tailwind CSS
+- Animations
+- Test E2E
+- CI/CD (vercel and checklyhq)
+- Minimalist design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Why i chose vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This part of the story is where ▲Vercel comes in. It combines the best developer experience with an obsessive focus on end-user performance. The platform enables frontend teams to do their best work, its application deployment infrastructure is based on serverless functions
 
-## Deploy on Vercel
+## Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+well this is my stack for the front:
+- next.js
+- tailwindcss
+- react-confetti
+- react-use-measure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+to improve code quality:
+- eslint
+- prettier
+- typescript
+- husky
+- lint-staged
+- autoprefixer
+- postcss
+
+## Metrics web vitals
+
+You can download the report made by lighthouse in the `/metrics` folder. I was able to reach a perfect score for both pages. This was possible due to optimization tasks that I carried out.
+
+![alt text for screen readers](https://ibb.co/DKGG1BJ)
+
+## CI CD
+
+In the project a flow is enabled that triggers a new deployment for each new commit, this is called within vercel **"deployment preview"**. After that, checklyhq runs E2E test with real browsers doing tests with respect to web vitals.
+
+![alt text for screen readers](https://ibb.co/wcjgqfh)
