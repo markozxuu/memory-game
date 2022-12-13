@@ -72,10 +72,10 @@ to improve code quality:
 
 You can download the report made by lighthouse in the `/metrics` folder. I was able to reach a perfect score for both pages. This was possible due to optimization tasks that I carried out.
 
-![alt text for screen readers](https://ibb.co/DKGG1BJ)
+![alt text for screen readers](https://i.ibb.co/F7sshQr/Screenshot-2022-12-12-at-20-00-12.png)
 
 ## CI CD
 
 In the project a flow is enabled that triggers a new deployment for each new commit, this is called within vercel **"deployment preview"**. After that, checklyhq runs E2E test with real browsers doing tests with respect to web vitals.
 
-![alt text for screen readers](https://ibb.co/wcjgqfh)
+![alt text for screen readers](https://i.ibb.co/BnF3J92/Screenshot-2022-12-12-at-20-09-32.png)
