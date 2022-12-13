@@ -13,7 +13,7 @@ const Menu = () => {
         <a
           className={s.btnSourceCode}
           rel="noopener noreferrer"
-          href="https://www.markozxuu.com/"
+          href="https://github.com/markozxuu/challenge-justo"
           target="_blank"
         >
           Find out how it was made
