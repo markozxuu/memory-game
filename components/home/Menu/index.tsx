@@ -7,7 +7,7 @@ const Menu = () => {
     <div className={s.container}>
       <div>
         <Link className={s.btnStart} href="/memory-game">
-          Start
+          Starts the game
         </Link>
 
         <a
