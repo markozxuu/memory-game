@@ -25,6 +25,7 @@ export default function Head() {
         name="twitter:image"
         content="https://challenge-justo.vercel.app/og.png"
       />
+      <link rel="icon" href="/favicon.ico" />
     </>
   );
 }
