@@ -9,13 +9,14 @@ const Menu = () => {
         <Link className={s.btnStart} href="/memory-game">
           Start
         </Link>
+
         <a
           className={s.btnSourceCode}
           rel="noopener noreferrer"
           href="https://www.markozxuu.com/"
           target="_blank"
         >
-          Source code
+          Find out how it was made
         </a>
       </div>
     </div>
