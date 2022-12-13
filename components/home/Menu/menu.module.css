@@ -1,0 +1,28 @@
+.container {
+  max-width: 550px;
+  @apply lg:w-3/5 w-4/5 lg:my-12 my-5;
+}
+
+.btnStart {
+  border-radius: 5px;
+  margin: 0 0 15px;
+  background-color: #f26f89;
+  box-shadow: 1px 1px 3px #eb1a45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply text-white lg:text-3xl text-2xl lg:h-[60px] h-[50px];
+  text-shadow: 1px 1px 3px #eb1a45;
+}
+
+.btnSourceCode {
+  border-radius: 5px;
+  background-color: #33cd9b;
+  box-shadow: 1px 1px 3px #28a57c;
+  text-shadow: 1px 1px 3px #28a57c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply text-white lg:text-3xl text-2xl lg:h-[60px] h-[50px];
+}
+
