@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
-import useWindowSize from 'react-use/lib/useWindowSize';
+import useMeasure from 'react-use-measure';
 
 // Components
 import MemoBlock from '../MemoBlock';
@@ -29,7 +29,7 @@ const Board = () => {
   const [moves, setMoves] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
 
-  const { width, height } = useWindowSize();
+  const [ref, bounds] = useMeasure();
   const { minute, second, setIsActive, setMinute, setSecond, setCounter } =
     useCountdown();
 
@@ -79,8 +79,8 @@ const Board = () => {
 
   console.log(score);
   return (
-    <>
-      {score >= 9 && <Confetti width={width} height={height} />}
+    <div ref={ref}>
+      {score >= 9 && <Confetti width={bounds.width} height={bounds.height} />}
       <div className={s['container-controls']}>
         <h1 className="text-white text-3xl text-center mb-4">Memory Game</h1>
         <div className="flex justify-center items-center space-x-8">
@@ -102,7 +102,7 @@ const Board = () => {
           );
         })}
       </main>
-    </>
+    </div>
   );
 };
 
