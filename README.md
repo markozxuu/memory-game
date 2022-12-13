@@ -41,6 +41,8 @@ Next.js is one of the most popular frameworks in the React ecosystem, it allows 
 
 - Written in TypeScript
 - Server and Client Components
+- Optimizing Fonts
+- Optimizing Images (CDN caching)
 - Styled using Tailwind CSS
 - Animations
 - Test E2E
