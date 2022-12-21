@@ -1,4 +1,4 @@
-# Challenge Jüsto
+# Memory game
 
 ## Table of Contents
 
